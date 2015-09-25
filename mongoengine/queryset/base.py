@@ -1700,6 +1700,8 @@ class BaseQuerySet(object):
             path = path or ''
 
             if isinstance(data, dict):
+                # todo problems?
+                return data
                 new_data = {}
                 for key, value in data.iteritems():
                     new_path = '%s.%s' % (path, key) if path else key
